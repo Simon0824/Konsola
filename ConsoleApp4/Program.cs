@@ -10,22 +10,28 @@ namespace Zadanie
             int a = int.Parse(Console.ReadLine());
             Console.WriteLine("Wpisz liczbe b:");
             int b = int.Parse(Console.ReadLine());
-            if (a != b)
+            bool cos = true;
+            while (cos = true)
             {
-                if(a > b)//
+                if (a != b)
                 {
-                    a /= a - b;
-                    Console.WriteLine(a);
+                    if (a > b)
+                    {
+                        a /= a - b;
+                        Console.WriteLine(a);
+                        cos = false;
+                    }
+                    else
+                    {
+                        b /= b - a;
+                        cos = true;
+                    }
                 }
                 else
                 {
-                    b /= b - a;
-                    Console.WriteLine(b);
+                    Console.WriteLine(a);
+                    cos = false;
                 }
-            }
-            else
-            {
-                Console.WriteLine(a);
             }
         }
     }
