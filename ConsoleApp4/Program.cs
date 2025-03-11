@@ -12,7 +12,7 @@ namespace Zadanie
             int b = int.Parse(Console.ReadLine());
             if (a != b)
             {
-                if(a > b)
+                if(a > b)//
                 {
                     a /= a - b;
                     Console.WriteLine(a);
